@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+    font-family: sans-serif;
+}
+
+#birds-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bird {
+
+    border: 2px solid lightgray;
+    width: 25%;
+}
+
+.bird-bg1 {
+    background-color: #90EE90;
+}
+
+.bird-bg2 {
+    background-color: #E0FFFF;
+}

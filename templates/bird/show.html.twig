@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Angry Birds - l'oiseau {{ bird.name }} {% endblock %}
+
+{% block body %}
+
+<h1>The name of this bird is {{ bird.name }} </h1>
+
+<div class="bird"><img src="../images/{{ bird.image }} " alt=" {{ bird.name }} "></div>
+
+<p>{{ bird.description }}</p>
+
+<hr>
+<p><a href=" {{ path('home')}} ">Retour à la liste</a></p>
+
+{% endblock %}

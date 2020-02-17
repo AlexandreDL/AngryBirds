@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Angry Birds!{% endblock %}
+
+{% block body %}
+
+<h1>A Field Guide to Angry Birds</h1>
+<h2>Games that lodge in the brain often have comical stars</h2>
+
+{% if bird_id is not null %}
+<p>Last bird seen: <a href="{{ path('bird_show', {'id': bird_id}) }}">{{ birds_list[bird_id].name }}</a></p>
+{% endif %}
+
+<div id="birds-list">
+{% for index, bird in birds_list %}
+    <div class="bird {{ cycle(['bird-bg1','bird-bg2'], index) }} ">
+        <a href="{{ path('bird_show', {'id': index}) }}">
+            <img src="images/{{ bird.image }}" alt="">
+            <div>{{ bird.name }}</div>
+        </a>
+    </div>
+{% endfor %}
+</div>
+
+{% endblock %}

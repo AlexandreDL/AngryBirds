@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset('css/site.css') }}">
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+    <nav>
+        <ul>
+            <li><a href="{{ path('home') }}">Home</a></li>
+            <li><a href="{{ path('calendar_download') }}">Download Calendar</a> (325 Ko) </li>
+            <li><a href="{{ path('api_birds') }}">API</a></li>
+        </ul>
+    </nav>
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
